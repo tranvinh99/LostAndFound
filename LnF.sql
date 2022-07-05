@@ -46,7 +46,7 @@ Insert into item_type values(N'Thẻ xe')
 Insert into item_type values(N'Chìa khóa')
 Insert into item_type values(N'linh kiện điện tử')
 Insert into item_type values(N'Ví/bóp')
-
+Insert into item_type values(N'Điện thoại')
 
 create table lost_found_item(
 item_id int primary key identity(1,1),
