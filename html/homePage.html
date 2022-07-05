@@ -11,15 +11,15 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>Lost and Found on FPT University</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-            <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <div class="container" id="nav_header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -30,14 +30,10 @@
                             <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> About</a>
+                            <a class="nav-link" href="#">Found</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span>
-                                Contact</a>
+                            <a class="nav-link" href="#"> Lost</a>
                         </li>
                     </ul>
                     <span class="navbar-text">
@@ -52,59 +48,275 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Login </h4>
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control form-control-sm mr-1"
-                                        id="exampleInputEmail3" placeholder="Enter email">
-                                </div>
-                                <div class="form-group col-sm-4">
-                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                    <input type="password" class="form-control form-control-sm mr-1"
-                                        id="exampleInputPassword3" placeholder="Password">
-                                </div>
-                                <div class="col-sm-auto">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
-                                        <label class="form-check-label"> Remember me
-                                        </label>
-                                    </div>
-                                </div>
+
+                    <div id="logreg-forms" class="modal-body">
+                        <form class="form-signin">
+                            <div class="social-login">
+                                <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
+                                            class="fab fa-facebook-f "></i> Sign in with Facebook</span> </button>
+                                <button class="btn google-btn social-btn btn-lg" type="button"><span><i
+                                            class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
                             </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                    data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                            </div>
+                            <p style="text-align:center"> OR </p>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                required="" autofocus="">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                required="">
+
+                            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>
+                                Sign in</button>
+                            <a href="#" id="forgot_pswd">Forgot password?</a>
+                            <hr>
+                            <!-- <p>Don't have an account!</p>  -->
+                            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i
+                                    class="fas fa-user-plus"></i> Sign up New Account</button>
                         </form>
+
+                        <form action="/reset/password/" class="form-reset">
+                            <input type="email" id="resetEmail" class="form-control" placeholder="Email address"
+                                required="" autofocus="">
+                            <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
+                            <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+                        </form>
+
+                        <form action="/signup/" class="form-signup">
+                            <div class="social-login">
+                                <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
+                                            class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+                            </div>
+                            <div class="social-login">
+                                <button class="btn google-btn social-btn btn-lg" type="button"><span><i
+                                            class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+                            </div>
+
+                            <p style="text-align:center">OR</p>
+
+                            <input type="text" id="user-name" class="form-control" placeholder="Full name" required=""
+                                autofocus="">
+                            <input type="email" id="user-email" class="form-control" placeholder="Email address"
+                                required autofocus="">
+                            <input type="password" id="user-pass" class="form-control" placeholder="Password" required
+                                autofocus="">
+                            <input type="password" id="user-repeatpass" class="form-control"
+                                placeholder="Repeat Password" required autofocus="">
+
+                            <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i>
+                                Sign Up</button>
+                            <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
 
     </header>
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4 ">
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-warning status_object">status: Found</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                            <p class="card-text"><a href="#">#dienthoai</a></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-danger status_object">status: Lost</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-success status_object">status: Solved</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-warning status_object">status: Found</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-warning status_object">status: Found</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-warning status_object">status: Found</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col  mb-4 ">
+                <a href="#">
+                    <div class="card">
+                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                            class="card-img-top" alt="Hollywood Sign on The Hill" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tìm thấy điện thoại </h5>
+                            <p class="text-warning status_object">status: Found</p>
+                            <p class="card-text description">
+                                This is a longer card with supporting text below as a natural lead-in to
+                                additional content.
+                            </p>
+                            <p class="card-text"><strong>location:</strong> thư viện</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-light text-muted mt-5 footer">
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-location-arrow me-3"></i>Địa chỉ
+                        </h6>
+                        <p>
+                            Lô E2a-7, Đường D1, Khu Công nghệ cao, P.Long Thạnh Mỹ, Tp. Thủ Đức, TP.HCM
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-5  col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Lost</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Founds</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Kết nối với chúng tôi
+                        </h6>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            daihoc.hcm@fpt.edu.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> (028) 7300 5588</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+    </footer>
+    <!-- Footer -->
 
 
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
     <script src="/js/myApp.js"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
-    -->
+
 </body>
 
 </html>
