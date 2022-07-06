@@ -12,12 +12,11 @@
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <title>Profile Information</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link href="../css/profile.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-sm">
+        <nav class="navbar navbar-default navbar-expand-sm">
             <div class="container" id="nav_header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                     <span class="navbar-toggler-icon"></span>
@@ -35,87 +34,27 @@
                             <a class="nav-link" href="#"> Lost</a>
                         </li>
                     </ul>
-                    <span class="navbar-text">
-                        <a id="loginButton">
-                            <span class="fa fa-sign-in-alt "></span>Login</a>
-                    </span>
+                    <ul id="main" class="nav-item">
+                    <li>
+                        Username
+                        <ul class="drop">
+                          <div>
+                          <li><a href="#">View Profile</a></li>
+                          
+                          <li>Logout</li>
+                          </div>
+                        </ul>
+                      </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-        <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg" role="content">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <div id="logreg-forms" class="modal-body">
-                        <form class="form-signin">
-                            <div class="social-login">
-                                <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
-                                            class="fab fa-facebook-f "></i> Sign in with Facebook</span> </button>
-                                <button class="btn google-btn social-btn btn-lg" type="button"><span><i
-                                            class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-                            </div>
-                            <p style="text-align:center"> OR </p>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                                required="" autofocus="">
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-                                required="">
-
-                            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>
-                                Sign in</button>
-                            <a href="#" id="forgot_pswd">Forgot password?</a>
-                            <hr>
-                            <!-- <p>Don't have an account!</p>  -->
-                            <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i
-                                    class="fas fa-user-plus"></i> Sign up New Account</button>
-                        </form>
-
-                        <form action="/reset/password/" class="form-reset">
-                            <input type="email" id="resetEmail" class="form-control" placeholder="Email address"
-                                required="" autofocus="">
-                            <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
-                            <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
-                        </form>
-
-                        <form action="/signup/" class="form-signup">
-                            <div class="social-login">
-                                <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
-                                            class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-                            </div>
-                            <div class="social-login">
-                                <button class="btn google-btn social-btn btn-lg" type="button"><span><i
-                                            class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-                            </div>
-
-                            <p style="text-align:center">OR</p>
-
-                            <input type="text" id="user-name" class="form-control" placeholder="Full name" required=""
-                                autofocus="">
-                            <input type="email" id="user-email" class="form-control" placeholder="Email address"
-                                required autofocus="">
-                            <input type="password" id="user-pass" class="form-control" placeholder="Password" required
-                                autofocus="">
-                            <input type="password" id="user-repeatpass" class="form-control"
-                                placeholder="Repeat Password" required autofocus="">
-
-                            <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i>
-                                Sign Up</button>
-                            <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </header>
     <div class="page-content page-container" id="page-content">
         <div class="padding">
             <div class="row container justify-content-center">
-    <div class="col-xl-10 col-md-12 offset-2">
+    <div class="col-xl-10 col-md-12 offset-3 offset-4">
                                                     <div class="card user-card-full">
                                                         <div class="row m-l-0 m-r-0">
                                                             <div class="col-sm-4 bg-c-lite-green user-profile">
@@ -123,8 +62,9 @@
                                                                     <div class="m-b-25">
                                                                         <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
                                                                     </div>
-                                                                    <h6 class="f-w-600">UserName</h6>
-                                                                    <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                                                </div>
+                                                                <div class="card-block text-center text-white m-t-40-5">
+                                                                    <h4 class="f-w-600">UserName</h4>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-8">
