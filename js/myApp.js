@@ -38,3 +38,17 @@ $(() => {
   $("#logreg-forms #btn-signup").click(toggleSignUp);
   $("#logreg-forms #cancel_signup").click(toggleSignUp);
 });
+
+var password = document.getElementById("password"),
+  confirm_password = document.getElementById("repeatpw");
+
+function validatePassword() {
+  if (password.value != repeatpw.value) {
+    repeatpw.setCustomValidity("Passwords Don't Match");
+  } else {
+    repeatpw.setCustomValidity("");
+  }
+}
+
+password.onchange = validatePassword;
+repeatpw.onkeyup = validatePassword;
