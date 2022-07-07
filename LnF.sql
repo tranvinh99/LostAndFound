@@ -40,13 +40,13 @@ type_description nvarchar(50) primary key
 )
 
 Insert into item_type values(N'Bình nước')
-Insert into item_type values(N'Thẻ sinh viên')
-Insert into item_type values(N'CMND')
-Insert into item_type values(N'Thẻ xe')
+Insert into item_type values(N'Thẻ')
+Insert into item_type values(N'Cmnd')
 Insert into item_type values(N'Chìa khóa')
 Insert into item_type values(N'linh kiện điện tử')
 Insert into item_type values(N'Ví/bóp')
 Insert into item_type values(N'Điện thoại')
+Insert into item_type values(N'Khác')
 
 create table lost_found_item(
 item_id int primary key identity(1,1),

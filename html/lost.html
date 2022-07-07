@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -12,108 +12,372 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <title>Lost and Found on FPT University</title>
-    <link rel="stylesheet" href="../css/profile.css">
+    <title>All found object</title>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link href="../css/profile.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-expand-sm fixed-top" id="navbar">
-        <!-- navbar-dark -->
+    <!-- Back to top button -->
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div id="post-bar" class="post-bar">
+        <a href="#" class="btn btn-light post-button btn-lg" data-toggle="tooltip" data-placement="left"
+            title="Đăng bài"><i class="fas fa-plus"></i></a>
+    </div>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container" id="nav_header">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="../images/logo.svg" height="50" width="150"></a>
-            <div class="collapse navbar-collapse" id="Navbar">
+            <a class="navbar-brand mr-auto" href="homePage.html"><img src="../images/logo.svg" height="50"
+                    width="150"></a>
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active" id="nav-item">
-                        <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="homePage.html"><span class="fa fa-home fa-lg"></span> Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item ">
                         <a class="nav-link" href="found.html">Found</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="lost.html"> Lost</a>
                     </li>
                 </ul>
-                <span class="navbar-text">
-                    <a id="loginButton">
-                        <span class="fa fa-sign-in-alt "></span>Login</a>
-                </span>
+                <ul id="main" class="nav-item">
+                    <li>
+                        Hello Tran Vinh
+                        <ul class="drop">
+                            <div class="drop__user__menu">
+                                <li><a href="#">View Profile</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+    <section class="container my-5">
+        <div class="row">
+            <div class="sw col search-bar">
+                <form class="">
+                    <input type="search" class="search" placeholder="Search...">
+                    <button class="go">
+                        <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z">
+                            </path>
+                        </svg>
+                    </button>
 
-                <div id="logreg-forms" class="modal-body">
-                    <form class="form-signin">
-                        <div class="social-login">
-                            <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
-                                        class="fab fa-facebook-f "></i> Sign in with Facebook</span> </button>
-                            <button class="btn google-btn social-btn btn-lg" type="button"><span><i
-                                        class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-                        </div>
-                        <p style="text-align:center"> OR </p>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required=""
-                            autofocus="">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password"
-                            required="">
-
-                        <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>
-                            Sign in</button>
-                        <a href="#" id="forgot_pswd">Forgot password?</a>
-                        <hr>
-                        <!-- <p>Don't have an account!</p>  -->
-                        <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i
-                                class="fas fa-user-plus"></i> Sign up New Account</button>
-                    </form>
-
-                    <form action="/reset/password/" class="form-reset">
-                        <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required=""
-                            autofocus="">
-                        <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
-                        <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
-                    </form>
-
-                    <form class="form-signup" id="form_signup" action="" method="">
-                        <div class="social-login">
-                            <button class="btn facebook-btn social-btn btn-lg" type="button"><span><i
-                                        class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-                        </div>
-                        <div class="social-login">
-                            <button class="btn google-btn social-btn btn-lg" type="button"><span><i
-                                        class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-                        </div>
-
-                        <p style="text-align:center">OR</p>
-
-                        <input type="text" id="user-name" class="form-control" placeholder="Full name" required=""
-                            autofocus="" name="username">
-                        <input type="email" id="user-email" class="form-control" placeholder="Email address" required
-                            autofocus="" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                            title="Must contain @ and . example a@gmail.com/a@co.co">
-                        <input type="password" id="password" class="form-control" placeholder="Password" required
-                            autofocus="" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
-                        <input type="password" id="repeatpw" class="form-control" placeholder="Repeat Password"
-                            name="repeatpw" required autofocus="">
-                        <button class="btn btn-primary btn-block" type="submit" id="signup-button"><i
-                                class="fas fa-user-plus"></i>
-                            Sign Up</button>
-                        <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
-                    </form>
-
-                </div>
+                </form>
             </div>
         </div>
-    </div>
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="fs-1">All Lost Item</h2>
+                <p class="mb-0">Phân loại tìm kiếm</p>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="item-pills-tab"
+            role="tablist">
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0 active" data-toggle="pill" data-target="#item-pills-tabs-1"
+                    type="button" role="tab" aria-controls="item-pills-tabs-1" aria-selected="false">Điện thoại</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0 " data-toggle="pill" data-target="#item-pills-tabs-2" type="button"
+                    role="tab" aria-controls="item-pills-tabs-2" aria-selected="true">Thẻ</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5 ">
+                <button class="nav-link mb-2 mb-md-0 " data-toggle="pill" data-target="#item-pills-tabs-3" type="button"
+                    role="tab" aria-controls="item-pills-tabs-3" aria-selected="false">CMND/CCCD</button>
+            </li>
+
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-4" type="button"
+                    role="tab" aria-controls="item-pills-tabs-5" aria-selected="false">Bình nước</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-5" type="button"
+                    role="tab" aria-controls="item-pills-tabs-6" aria-selected="false">Linh kiện</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-6" type="button"
+                    role="tab" aria-controls="item-pills-tabs-7" aria-selected="false">Ví/bóp</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-7" type="button"
+                    role="tab" aria-controls="item-pills-tabs-7" aria-selected="false">Khác</button>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="item-pills-tabs-1">
+                <div class="row row-cols-1 row-cols-md-3 g-4 ">
+                    <div class="col mb-4">
+                        <div class="card shadow h-100 card-detail">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-2">
+                <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0">
+                    <div class="container my-auto mx-auto">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-lg-8 text-center">
+                                <p class="display-1 text-dark mb-4 title-heading">
+                                    Đéo có khỏi tìm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-3">
+                Trang 3
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-4">
+                Trang 4
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-5">
+                Trang 5
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-6">
+                Trang 6
+            </div>
+            <div class="tab-pane container " id="item-pills-tabs-7">
+                Trang 7
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <footer class="text-center text-lg-start bg-light text-muted mt-5 footer">
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-location-arrow me-3"></i>Địa chỉ
+                        </h6>
+                        <p>
+                            Lô E2a-7, Đường D1, Khu Công nghệ cao, P.Long Thạnh Mỹ, Tp. Thủ Đức, TP.HCM
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+
+                    <!-- Grid column -->
+                    <div class="col-md-5  col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Lost</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Founds</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Kết nối với chúng tôi
+                        </h6>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            daihoc.hcm@fpt.edu.vn
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> (028) 7300 5588</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+    </footer>
+    <!-- Footer -->
+
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -129,7 +393,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
-    <script src="../js/myApp.js"></script>
+    <script src="../js/jquery.js"></script>
+
 </body>
 
 </html>

@@ -22,7 +22,7 @@
         <i class="fas fa-arrow-up"></i>
     </button>
     <div id="post-bar" class="post-bar">
-        <a href="" class="btn btn-light post-button btn-lg" data-toggle="tooltip" data-placement="left"
+        <a href="#" class="btn btn-light post-button btn-lg" data-toggle="tooltip" data-placement="left"
             title="Đăng bài"><i class="fas fa-plus"></i></a>
     </div>
     <nav class="navbar navbar-default navbar-expand-sm fixed-top" id="navbar">
@@ -144,10 +144,26 @@
                 </div>
             </div>
         </div>
-
     </header>
 
     <section class="container my-5">
+        <div class="row">
+            <div class="sw col search-bar">
+                <form class="">
+                    <input type="search" class="search" placeholder="Search...">
+                    <button class="go">
+                        <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path
+                                d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z">
+                            </path>
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
+        </div>
         <div class="row mb-4">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="fs-1">All Item here</h2>
@@ -172,25 +188,26 @@
                 <button class="nav-link mb-2 mb-md-0 " data-toggle="pill" data-target="#item-pills-tabs-3" type="button"
                     role="tab" aria-controls="item-pills-tabs-3" aria-selected="false">CMND/CCCD</button>
             </li>
-            <!-- Tab item -->
-            <li class="nav-item me-2 me-sm-5 ">
-                <button class="nav-link mb-2 mb-md-0 " data-toggle="pill" data-target="#item-pills-tabs-4" type="button"
-                    role="tab" aria-controls="item-pills-tabs-4" aria-selected="false">Điện thoại</button>
-            </li>
+
             <!-- Tab item -->
             <li class="nav-item me-2 me-sm-5">
-                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-5" type="button"
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-4" type="button"
                     role="tab" aria-controls="item-pills-tabs-5" aria-selected="false">Bình nước</button>
             </li>
             <!-- Tab item -->
             <li class="nav-item me-2 me-sm-5">
-                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-6" type="button"
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-5" type="button"
                     role="tab" aria-controls="item-pills-tabs-6" aria-selected="false">Linh kiện</button>
             </li>
             <!-- Tab item -->
             <li class="nav-item me-2 me-sm-5">
-                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-7" type="button"
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-6" type="button"
                     role="tab" aria-controls="item-pills-tabs-7" aria-selected="false">Ví/bóp</button>
+            </li>
+            <!-- Tab item -->
+            <li class="nav-item me-2 me-sm-5">
+                <button class="nav-link mb-2 mb-md-0" data-toggle="pill" data-target="#item-pills-tabs-7" type="button"
+                    role="tab" aria-controls="item-pills-tabs-7" aria-selected="false">Khác</button>
             </li>
         </ul>
         <!-- Tab panes -->
@@ -206,10 +223,10 @@
                                 <!-- Badge and favorite -->
                                 <div class="d-flex justify-content-between mb-2">
                                     <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
-                                    <p class="text-danger"><strong>status: </strong>lost </p>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
                                 </div>
                                 <!-- Title -->
-                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
                                 <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
                                     natural
                                     lead-in to
@@ -237,10 +254,42 @@
                                 <!-- Badge and favorite -->
                                 <div class="d-flex justify-content-between mb-2">
                                     <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
-                                    <p class="text-danger"><strong>status: </strong>lost </p>
+                                    <p class="text-success"><strong><span class="fa fa-circle"></span> </strong>Found
+                                    </p>
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100 card-detail">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
                                 <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
                                     natural
                                     lead-in to
@@ -268,10 +317,42 @@
                                 <!-- Badge and favorite -->
                                 <div class="d-flex justify-content-between mb-2">
                                     <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
-                                    <p class="text-danger"><strong>status: </strong>lost </p>
+                                    <p class="text-success"><strong><span class="fa fa-circle"></span> </strong>Found
+                                    </p>
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                    natural
+                                    lead-in to
+                                    additional content.</p>
+                            </div>
+                            <!-- Card footer -->
+                            <div class="card-footer pt-0 pb-3">
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                        20m</span>
+                                    <span class="h6 fw-light mb-0"><i
+                                            class="fas fa-location-arrow text-orange me-2"></i>thư
+                                        viện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow h-100 card-detail">
+                            <!-- Image -->
+                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                                class="card-img-top" alt="course image">
+                            <div class="card-body pb-0">
+                                <!-- Badge and favorite -->
+                                <div class="d-flex justify-content-between mb-2">
+                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                                    <p class="text-danger"><span class="fa fa-circle"></span> lost </p>
+                                </div>
+                                <!-- Title -->
+                                <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
                                 <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
                                     natural
                                     lead-in to
@@ -299,38 +380,8 @@
                                 <!-- Badge and favorite -->
                                 <div class="d-flex justify-content-between mb-2">
                                     <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
-                                    <p class="text-danger"><strong>status: </strong>lost </p>
-                                </div>
-                                <!-- Title -->
-                                <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
-                                    natural
-                                    lead-in to
-                                    additional content.</p>
-                            </div>
-                            <!-- Card footer -->
-                            <div class="card-footer pt-0 pb-3">
-                                <hr>
-                                <div class="d-flex justify-content-between">
-                                    <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
-                                        20m</span>
-                                    <span class="h6 fw-light mb-0"><i
-                                            class="fas fa-location-arrow text-orange me-2"></i>thư
-                                        viện</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card shadow h-100">
-                            <!-- Image -->
-                            <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                                class="card-img-top" alt="">
-                            <div class="card-body pb-0">
-                                <!-- Badge and favorite -->
-                                <div class="d-flex justify-content-between mb-2">
-                                    <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
-                                    <p class="text-danger"><strong>status: </strong>lost </p>
+                                    <p class="text-success"><strong><span class="fa fa-circle"></span> </strong>Found
+                                    </p>
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
@@ -358,7 +409,17 @@
                 </div>
             </div>
             <div class="tab-pane container " id="item-pills-tabs-2">
-                Trang 2
+                <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0 no-item">
+                    <div class="container my-auto mx-auto">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-8 col-lg-8 text-center">
+                                <p class="display-1 text-dark mb-4 title-heading-noitem">
+                                    There are no item
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane container " id="item-pills-tabs-3">
                 Trang 3

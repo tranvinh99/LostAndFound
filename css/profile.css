@@ -344,7 +344,7 @@ body {
 
 .container {
   display: block;
-  width: 70%;
+  width: 100%;
   /* margin: 20px auto 0 auto; */
   height: auto;
 }
@@ -353,7 +353,7 @@ body {
   float: left;
   width: 100%;
   height: 80px;
-  background: #533687;
+  background: #8e8fed;
   padding: 15px;
   display: flex;
   align-items: center;
@@ -488,13 +488,121 @@ body {
   background-color: #fff;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
+  bottom: 0;
 }
 
-input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="text"] {
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
 
-.effect-1, 
-.effect-2, 
-.effect-3{border: 0; padding: 7px 0; border-bottom: 1px solid #ccc;}
-.effect-1{background: linear-gradient(to right, #5aeebd, #639af2);text-align: center;}
-.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
-.effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-1,
+.effect-2,
+.effect-3 {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.effect-1 {
+  background: linear-gradient(to right, #5aeebd, #639af2);
+  text-align: center;
+}
+
+.effect-1~.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399FF;
+  transition: 0.4s;
+}
+
+.effect-1:focus~.focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
+
+.nav-item {
+  margin: 0 1.5rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #fff;
+  background-color: #066ac9;
+}
+
+.nav-pills .nav-link {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding: 0.5rem 1rem;
+}
+
+.nav-pills .nav-link {
+  background: none;
+  border: 0;
+  border-radius: 0.325rem;
+}
+
+.nav-pills-bg-soft {
+  background-color: rgba(6, 106, 201, 0.1);
+  padding: 0.625rem 0;
+  border-radius: 0.625rem;
+}
+
+.px-3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.6rem !important;
+}
+
+.card {
+  color: black;
+  max-width: 348.01px;
+}
+
+.card-body {
+  height: 270px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+#post-bar {
+  position: fixed;
+  padding: 15px 10px;
+  right: 20px;
+  bottom: 35%;
+  width: 73px;
+  height: 250px;
+  background-color: rgba(108, 117, 125, 0.4);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.post-button {
+  border-radius: 100rem;
+}
+
+.display-1 {
+  font-size: 4rem;
+}
+
+.search-bar {
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 1.5rem;
+}
