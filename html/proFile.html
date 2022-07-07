@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                                 <div class="card-block text-center text-white m-t-40-5">
-                                    <input class="effect-1" type="text" placeholder="Placeholder Text" readonly>
+                                    <input class="effect-1" type="text" name="uname" placeholder="Placeholder Text" readonly>
                                 </div>
                             </div>
                             <div class="col-sm-8">
@@ -75,18 +75,18 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Email</p>
-                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
+                                            <input class="effect-2" type="text" name="email" placeholder="Placeholder Text" readonly>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Phone</p>
-                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
+                                            <input class="effect-2" type="text" name="phone" placeholder="Placeholder Text" readonly>
                                         </div>
                                     </div>
                                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">FullName</p>
-                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
+                                            <input class="effect-2" type="text" name="fullname" placeholder="Placeholder Text" readonly>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Status</p>
@@ -97,8 +97,9 @@
                                     <ul class="social-link list-unstyled m-t-40 m-b-10">
 
                                         <div class="wrap" id="edit">
-                                            <button class="button">Update</button>
-                                            
+                                            <button type="button" class="button">Update</button>
+                                            <button type="reset" class="button d-none">Cancel</button>
+                                            <button type="submit" class="button d-none">Submit</button>
                                         </div>
 
 
@@ -190,8 +191,9 @@
     <script>
          $(document).ready(function() {
             $("#edit").click(function() {
-            $('.effect-1').removeAttr("readonly")
-            $('.effect-2').removeAttr("readonly")
+            $('.effect-1').removeAttr("readonly");
+            $('.effect-2').removeAttr("readonly");
+            $('.button').toggleClass("d-none");
             });
         });
     </script>
