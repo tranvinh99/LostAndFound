@@ -53,6 +53,7 @@
 
     <div class="page-content page-container" id="page-content">
         <div class="padding">
+            <form>
             <div class="row container justify-content-center">
                 <div class="col-xl-10 col-md-12 offset-3 offset-4">
                     <div class="card user-card-full">
@@ -74,18 +75,18 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Email</p>
-                                            <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Phone</p>
-                                            <h6 class="text-muted f-w-400">98979989898</h6>
+                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
                                         </div>
                                     </div>
                                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"></h6>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">FullName</p>
-                                            <h6 class="text-muted f-w-400">Sam Disuja</h6>
+                                            <input class="effect-2" type="text" placeholder="Placeholder Text" readonly>
                                         </div>
                                         <div class="col-sm-6">
                                             <p class="m-b-10 f-w-600">Status</p>
@@ -97,6 +98,7 @@
 
                                         <div class="wrap" id="edit">
                                             <button class="button">Update</button>
+                                            
                                         </div>
 
 
@@ -107,6 +109,7 @@
                     </div>
                 </div>
             </div>
+        </form>
         </div>
     </div>
     <footer class="text-center text-lg-start bg-light text-muted footer fixed-bottom">
@@ -188,6 +191,7 @@
          $(document).ready(function() {
             $("#edit").click(function() {
             $('.effect-1').removeAttr("readonly")
+            $('.effect-2').removeAttr("readonly")
             });
         });
     </script>
