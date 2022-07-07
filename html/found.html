@@ -12,182 +12,216 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <title>Lost and Found on FPT University</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>All found object</title>
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link href="../css/profile.css" rel="stylesheet">
 </head>
+
 <body>
-<div>
-    <header>
-        <nav class="navbar navbar-default navbar-expand-sm">
-            <div class="container" id="nav_header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand mr-auto" href="#"><img src="../images/logo.svg" height="50" width="150"></a>
-                <div class="collapse navbar-collapse" id="Navbar">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Found</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Lost</a>
-                        </li>
-                    </ul>
-                    <ul id="main" class="nav-item">
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container" id="nav_header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="homePage.html"><img src="../images/logo.svg" height="50"
+                    width="150"></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="homePage.html"><span class="fa fa-home fa-lg"></span> Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Found</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lost.html"> Lost</a>
+                    </li>
+                </ul>
+                <ul id="main" class="nav-item">
                     <li>
                         Username
                         <ul class="drop">
-                          <div>
-                          <li><a href="#">View Profile</a></li>
-                          
-                          <li>Logout</li>
-                          </div>
+                            <div class="drop__user__menu">
+                                <li><a href="#">View Profile</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </div>
                         </ul>
-                      </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        
+        </div>
+    </nav>
+    <header>
     </header>
     <!-- -->
     <div class="row">
-    <div class="sw col-8 offset-2">
-        <form class="">
-          <input type="search" class="search" placeholder="Search..." />
-          <button class="go">
-            <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z"/></svg>
-          </button>
-          
-        </form>
-      </div>
+        <div class="sw col-8 offset-2">
+            <form class="">
+                <input type="search" class="search" placeholder="Search..." />
+                <button class="go">
+                    <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path
+                            d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z" />
+                    </svg>
+                </button>
+
+            </form>
+        </div>
     </div>
-  <!-- -->
+    <!-- -->
     <div class="container my-5">
         <div class="row row-cols-1 row-cols-md-3 g-4 ">
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-warning status_object">status: Found</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
-                            <p class="card-text"><a href="#">#dienthoai</a></p>
+            <div class="col mb-4">
+                <div class="card shadow h-100">
+                    <!-- Image -->
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                        class="card-img-top" alt="">
+                    <div class="card-body pb-0">
+                        <!-- Badge and favorite -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                            <p class="text-danger"><strong>status: </strong>lost </p>
+                        </div>
+                        <!-- Title -->
+                        <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                        <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                            natural
+                            lead-in to
+                            additional content.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pt-0 pb-3">
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                20m</span>
+                            <span class="h6 fw-light mb-0"><i class="fas fa-location-arrow text-orange me-2"></i>thư
+                                viện</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-danger status_object">status: Lost</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
+            <div class="col mb-4">
+                <div class="card shadow h-100">
+                    <!-- Image -->
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                        class="card-img-top" alt="">
+                    <div class="card-body pb-0">
+                        <!-- Badge and favorite -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                            <p class="text-danger"><strong>status: </strong>lost </p>
+                        </div>
+                        <!-- Title -->
+                        <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                        <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                            natural
+                            lead-in to
+                            additional content.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pt-0 pb-3">
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                20m</span>
+                            <span class="h6 fw-light mb-0"><i class="fas fa-location-arrow text-orange me-2"></i>thư
+                                viện</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-success status_object">status: Solved</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
+            <div class="col mb-4">
+                <div class="card shadow h-100">
+                    <!-- Image -->
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                        class="card-img-top" alt="">
+                    <div class="card-body pb-0">
+                        <!-- Badge and favorite -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                            <p class="text-danger"><strong>status: </strong>lost </p>
+                        </div>
+                        <!-- Title -->
+                        <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                        <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                            natural
+                            lead-in to
+                            additional content.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pt-0 pb-3">
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                20m</span>
+                            <span class="h6 fw-light mb-0"><i class="fas fa-location-arrow text-orange me-2"></i>thư
+                                viện</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-warning status_object">status: Found</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
+            <div class="col mb-4">
+                <div class="card shadow h-100">
+                    <!-- Image -->
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                        class="card-img-top" alt="">
+                    <div class="card-body pb-0">
+                        <!-- Badge and favorite -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                            <p class="text-danger"><strong>status: </strong>lost </p>
+                        </div>
+                        <!-- Title -->
+                        <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                        <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                            natural
+                            lead-in to
+                            additional content.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pt-0 pb-3">
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                20m</span>
+                            <span class="h6 fw-light mb-0"><i class="fas fa-location-arrow text-orange me-2"></i>thư
+                                viện</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-warning status_object">status: Found</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
+            <div class="col mb-4">
+                <div class="card shadow h-100">
+                    <!-- Image -->
+                    <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
+                        class="card-img-top" alt="">
+                    <div class="card-body pb-0">
+                        <!-- Badge and favorite -->
+                        <div class="d-flex justify-content-between mb-2">
+                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">#dienthoai</a>
+                            <p class="text-danger"><strong>status: </strong>lost </p>
+                        </div>
+                        <!-- Title -->
+                        <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
+                        <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                            natural
+                            lead-in to
+                            additional content.</p>
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pt-0 pb-3">
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>35h
+                                20m</span>
+                            <span class="h6 fw-light mb-0"><i class="fas fa-location-arrow text-orange me-2"></i>thư
+                                viện</span>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-warning status_object">status: Found</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col  mb-4 ">
-                <a href="#">
-                    <div class="card">
-                        <img src="https://image.thanhnien.vn/w1024/Uploaded/2022/yfrph/2022_04_12/47cb7a75-7dd8-45e5-b0be-989eedf68d4c-4196.jpeg"
-                            class="card-img-top" alt="Hollywood Sign on The Hill" />
-                        <div class="card-body">
-                            <h5 class="card-title">Tìm thấy điện thoại </h5>
-                            <p class="text-warning status_object">status: Found</p>
-                            <p class="card-text description">
-                                This is a longer card with supporting text below as a natural lead-in to
-                                additional content.
-                            </p>
-                            <p class="card-text"><strong>location:</strong> thư viện</p>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </div>
 
 
@@ -268,7 +302,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
-    <script src="/js/myApp.js"></script>
+    <script src="/js/jquery.js"></script>
 
 </body>
 
