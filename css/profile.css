@@ -564,10 +564,7 @@ input[type="text"] {
   margin-bottom: 1.6rem !important;
 }
 
-.card {
-  color: black;
-  max-width: 348.01px;
-}
+
 
 .card-body {
   height: 270px;
@@ -605,4 +602,8 @@ input[type="text"] {
   margin-bottom: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 1.5rem;
+}
+
+#nav_header li {
+  margin: 0 5px
 }
