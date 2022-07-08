@@ -448,3 +448,23 @@ h6 {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 1.5rem;
 }
+
+.setting-button {
+    margin-left: auto;
+}
+
+.modal-header .close {
+    margin: -1rem -1rem -1rem 1rem;
+    padding: 1rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.img-fluid {
+    max-height: 488px;
+}
+
+.item-detail {
+    font-weight: 500;
+    font-size: 1.2rem
+}
