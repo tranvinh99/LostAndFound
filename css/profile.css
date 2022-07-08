@@ -80,11 +80,11 @@ h6 {
   line-height: 25px;
 }
 
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1400px) {
   p {
     font-size: 14px;
   }
-}
+} */
 
 .card-block {
   padding: 1.25rem;
@@ -445,7 +445,7 @@ body {
   fill: #ccc;
 }
 
-.content {
+/* .content {
   float: left;
   width: 100%;
   clear: both;
@@ -482,7 +482,7 @@ body {
 
 .content cite {
   color: #aaa;
-}
+} */
 
 .footer {
   background-color: #fff;
@@ -607,3 +607,33 @@ input[type="text"] {
 #nav_header li {
   margin: 0 5px
 }
+
+.setting-button {
+  margin-left: auto;
+}
+
+.modal-header .close {
+  margin: -1rem -1rem -1rem 1rem;
+  padding: 1rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.img-fluid {
+  max-height: 488px;
+}
+
+.item-detail {
+  font-weight: 500;
+  font-size: 1.2rem
+}
+
+.card-detail img {
+  height: 232px;
+  width: 338px;
+  cursor: pointer;
+}
+
+/* .card-detail{
+
+} */
