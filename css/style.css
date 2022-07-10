@@ -50,7 +50,7 @@ h6 {
 /* fileName:  Style.css */
 
 .title-heading {
-    background: rgba(194, 185, 185, 0.7);
+    background: rgba(194, 185, 185, 0.3);
 }
 
 #nav_header {
@@ -61,12 +61,12 @@ h6 {
     margin: 0 5px
 }
 
-/* .navbar-text{
-    position: absolute;
-    right: 15px;
-} */
+.nav-header-bar li:hover {
+    color: yellow
+}
+
 #loginButton:hover {
-    opacity: 0.7;
+    color: yellow;
     cursor: pointer;
 }
 
@@ -89,7 +89,7 @@ h6 {
 } */
 
 #Navbar a {
-    color: black;
+    color: white
 }
 
 /* Login modal */

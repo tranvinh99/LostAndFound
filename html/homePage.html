@@ -6,23 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/decoupled-document/ckeditor.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-
     <title>Lost and Found on FPT University</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -34,7 +26,6 @@
         <a href="#" type="button" class="btn btn-light post-button btn-lg" data-toggle="modal" data-placement="left"
             title="Đăng bài" data-target="#myModal"><i class="fas fa-plus"></i></a>
     </div>
-
     <!-- Post -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-xl">
@@ -117,14 +108,12 @@
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Post</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Post</button>
                 </div>
             </div>
 
         </div>
     </div>
-
     <!-- Detail -->
     <div class="modal fade" id="DetailModal">
         <div class="modal-dialog modal-xl">
@@ -234,15 +223,15 @@
         </div>
     </div>
 
-    <!-- <nav class="navbar navbar-default navbar-expand-sm fixed-top" id="navbar">
-        navbar-dark
+    <nav class="navbar navbar-default navbar-expand-sm fixed-top" id="navbar">
+        <!-- navbar-dark -->
         <div class="container" id="nav_header">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand mr-auto" href="#"><img src="../images/logo.svg" height="50" width="150"></a>
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto nav-header-bar">
                     <li class="nav-item active" id="nav-item">
                         <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
                     </li>
@@ -260,98 +249,6 @@
             </div>
         </div>
     </nav>
-
-    <header class="header" id="startchange">
-        <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0">
-            <div class="container my-auto mx-auto">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-8 col-lg-8 text-center">
-                        
-                        <h3 class="text-xs text-dark-75">
-                            <span class="text-primary">Fpt</span> / University
-                        </h3>
-                        
-                        <h4 class="display-1 text-dark mb-4 title-heading">
-                            <strong>Lost and Found</strong>
-                        </h4>
-                 
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> -->
-
-    <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-          <div class="container-fluid">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-mdb-toggle="collapse"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <i class="fas fa-bars"></i>
-            </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="../images/logo.svg" height="50" width="150"></a>
-            <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active" id="nav-item">
-                        <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="found.html">Found</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="lost.html"> Lost</a>
-                    </li>
-                </ul>
-                
-                  <span class="navbar-text" style="display: absolute; right:80px;">
-                      <a id="loginButton">
-                          <span class="fa fa-sign-in-alt"></span> Login</a>
-                  </span>
-                
-                
-            </div>
-          </div>
-        </nav>
-        <!-- Navbar -->
-      
-        <!-- Background image -->
-        <div
-          id="intro-example"
-          class="p-5 text-center bg-image"
-          style="background-image: url('https://hcmuni.fpt.edu.vn/Data/Sites/1/media/hinh-gioi-thieu-dai-hoc-fpt/hcm.png');"
-        >
-          <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div class="text-white">
-                <h1 class="mb-3">LOST AND FOUND</h1>
-                
-                <a
-                  class="btn btn-outline-light btn-lg m-2"
-                  href="#"
-                  role="button"
-                  rel="nofollow"
-                  target="_blank"
-                >Bạn mất đồ?</a
-                >
-                <a
-                  class="btn btn-outline-light btn-lg m-2"
-                  href="#"
-                  target="_blank"
-                  role="button"
-                >Bạn nhặt được đồ?</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Background image -->
 
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -425,7 +322,30 @@
         </div>
     </div>
 
-    
+    <header class="header" id="startchange">
+        <div class="d-flex flex-column min-vh-100 bg-black-50 pt-10 pt-md-8 pb-7 pb-md-0"
+            style="background-color: rgba(0, 0, 0, 0.7);">
+            <div class="container my-auto mx-auto">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-8 text-center">
+                        <!-- Preheading -->
+                        <h3 class="text-xs text-light">
+                            <span class="text-light">Fpt</span> / University
+                        </h3>
+                        <!-- Heading -->
+                        <h4 class="display-1 text-light mb-4 title-heading">
+                            <strong>Lost and Found</strong>
+                        </h4>
+                        <a class="btn btn-outline-light btn-lg m-2" href="#" role="button" rel="nofollow"
+                            target="_blank">Bạn mất
+                            đồ?</a>
+                        <a class="btn btn-outline-light btn-lg m-2" href="#" target="_blank" role="button">Bạn nhặt được
+                            đồ?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <section class="container my-5">
         <div class="row">
@@ -847,16 +767,16 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="../js/myApp.js"></script>
     <script>
         DecoupledEditor
