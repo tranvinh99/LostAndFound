@@ -5,12 +5,24 @@
 	<meta charset="utf-8">
 	<title>ADMIN</title>
 	<link rel="stylesheet" href="../css/styleAdmin.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+
+
 	<link
 		href='https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css?fbclid=IwAR0zP-eGpeNIPDXxwVIGkEgfmGdz79xPZXfbalbDgXEsOSmbWdm2IeUnlJ4'
 		rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+	<!-- MDB -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+
 </head>
 
 <body>
@@ -22,8 +34,16 @@
 			<div class="header-menu">
 				<div class="title">Lost&Found</div>
 				<ul>
-					<li><a href="#"><i class="fa-light fa-magnifying-glass"></i></i></a></li>
-					<li><a href="#"><i class="fa-light fa-bell-on"></i></a></li>
+					<li>
+						<div class="input-group rounded">
+							<input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+								aria-describedby="search-addon" />
+							<span class="input-group-text border-0" id="search-addon">
+								<i style="cursor: pointer; color: white;" class="fa-solid fa-magnifying-glass"></i>
+							</span>
+						</div>
+					</li>
+					<li><a href="#"><i onclick="toggleNotifi()" class="fa-light fa-bell-on icon"></i></a></li>
 					<li><a href="#"><i class="fa-light fa-right-from-bracket"></i></a></li>
 				</ul>
 			</div>
@@ -36,14 +56,14 @@
 					<img src="https://source.unsplash.com/random" alt="" />
 					<p>Name</p>
 				</center>
-				<li class="item ">
-					<a href="#" class="menu-btn active">
+				<li class="item">
+					<a href="dashboard.html" class="menu-btn active">
 						<i class="fas fa-desktop"></i><span>Dashboard</span>
 					</a>
 				</li>
 
 				<li class="item">
-					<a href="#" class="menu-btn">
+					<a href="userMgt.html" class="menu-btn">
 						<i class="fa-light fa-users"></i><span>User</span>
 					</a>
 				</li>
@@ -81,7 +101,7 @@
 				</div>
 			</div>
 			<div class="sticky-table">
-				<table>
+				<table class="table table-striped myTable">
 					<thead>
 						<tr>
 							<th>Username</th>
@@ -105,7 +125,7 @@
 							<td>content3</td>
 							<td>content4</td>
 							<td>content5</td>
-							<td>content6</td>
+							<td><span class="badge badge-success">Success</span></td>
 							<td>
 								<a href="edit.html">Edit</a>
 							</td>
@@ -122,7 +142,7 @@
 							<td>content3</td>
 							<td>content4</td>
 							<td>content5</td>
-							<td>content6</td>
+							<td><span class="badge badge-danger">Danger</span></td>
 							<td>
 								<a href="edit.html">Edit</a>
 							</td>
@@ -138,7 +158,7 @@
 							<td>content3</td>
 							<td>content4</td>
 							<td>content5</td>
-							<td>content6</td>
+							<td><span class="badge badge-warning">Warning</span></td>
 							<td>
 								<a href="edit.html">Edit</a>
 							</td>
@@ -154,13 +174,24 @@
 							<td>content3</td>
 							<td>content4</td>
 							<td>content5</td>
-							<td>content6</td>
+							<td><span class="badge badge-primary">Primary</span></td>
 							<td>
 								<a href="edit.html">Edit</a>
 							</td>
 						</tr>
 
 					</tbody>
+					<tfoot>
+						<tr>
+							<th>Username</th>
+							<th>Password</th>
+							<th>Fullname</th>
+							<th>Contact</th>
+							<th>Email</th>
+							<th>Status</th>
+							<th>Edit</th>
+						</tr>
+					</tfoot>
 				</table>
 			</div>
 		</div>
@@ -169,15 +200,23 @@
 	</div>
 	<!--wrapper end-->
 	<script>
-		const menuItems = document.querySelectorAll(".menu-btn");
-		menuItems.forEach((item) =>
-			item.addEventListener("click", function (event) {
-				menuItems.forEach((el) => el.classList.remove("active"));
-				event.target.classList.add("active");
-			})
-		);
-	</script>
+        const menuItems = document.querySelectorAll(".menu-btn");
+        menuItems.forEach((item) =>
+            item.addEventListener("click", function (event) {
+                menuItems.forEach((el) => el.classList.remove("active"));
+                event.target.classList.add("active");
+            })
+        );
+    </script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> 
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+	$(document).ready(function () {
+    $('.myTable').DataTable();
+});
+</script>
 </body>
 
 </html>

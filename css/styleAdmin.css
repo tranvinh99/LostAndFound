@@ -79,8 +79,9 @@ a {
 }
 
 .wrapper .header .header-menu ul li a:hover {
-  background: #4CCEE8;
-  color: #fff;
+  /* background: #4CCEE8;
+  color: #fff; */
+  opacity: 0.8;
 }
 
 .wrapper .sidebar {
@@ -125,8 +126,8 @@ a {
   transition: 0.3s;
 }
 .wrapper .sidebar .sidebar-menu .item :hover,
-.wrapper .sidebar .sidebar-menu .item .menu-btn.active{
-  color: #4CCEE8;
+.wrapper .sidebar .sidebar-menu .item .active{
+  background-color: #000;
 }
 
 .wrapper .sidebar .sidebar-menu .item .menu-btn i {
@@ -184,6 +185,9 @@ table td {
 
 table tbody tr {
   border-top: 1px solid #f0f4f8;
+}
+table tr:hover{
+  background-color: darkgrey;
 }
 
 table .user {
