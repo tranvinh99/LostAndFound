@@ -117,7 +117,6 @@ a {
   width: 250px;
   overflow: hidden;
 }
-
 .wrapper .sidebar .sidebar-menu .item .menu-btn {
   display: block;
   color: #fff;
@@ -217,4 +216,13 @@ table .user img {
 
 .sticky-table tbody td:first-child span {
   padding-right: 50px;
+}
+.pagination,
+.dataTables_length,
+.dataTables_filter {
+    padding: 10px;
+}
+
+.dataTables_info {
+    margin-left: 10px;
 }

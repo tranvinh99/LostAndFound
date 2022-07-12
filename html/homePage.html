@@ -9,9 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link
+        href='https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css?fbclid=IwAR0zP-eGpeNIPDXxwVIGkEgfmGdz79xPZXfbalbDgXEsOSmbWdm2IeUnlJ4'
+        rel='stylesheet'>
     <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/decoupled-document/ckeditor.js"></script>
     <title>Lost and Found on FPT University</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -22,10 +22,9 @@
         data-placement="left" title="back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <div id="post-bar" class="post-bar">
-        <a href="#" type="button" class="btn btn-light post-button btn-lg" data-toggle="modal" data-placement="left"
-            title="Đăng bài" data-target="#myModal"><i class="fas fa-plus"></i></a>
-    </div>
+
+
+
     <!-- Post -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-xl">
@@ -44,7 +43,7 @@
                                 <p>Title:</p>
                             </div>
                             <div class="col-12 col-sm-4 mt-3">
-                                <input type="text" class="form-control" name="">
+                                <input type="" class="form-control" name="">
                             </div>
                             <div class="col-12 col-sm-2 mt-3">
                                 <p>Category:</p>
@@ -69,7 +68,7 @@
                             </div>
 
                             <div class="col-12 col-sm-4 mt-3">
-                                <input type="password" class="form-control" name="">
+                                <input type="" class="form-control" name="">
                             </div>
                             <div class="col-sm-2 mt-3">
                                 <label for="">Date:</label>
@@ -114,6 +113,8 @@
 
         </div>
     </div>
+
+
     <!-- Detail -->
     <div class="modal fade" id="DetailModal">
         <div class="modal-dialog modal-xl">
@@ -242,6 +243,9 @@
                         <a class="nav-link" href="lost.html"> Lost</a>
                     </li>
                 </ul>
+                <form action="">
+                    <input class="input-search" type="text" name="search" placeholder="Search..">
+                </form>
                 <span class="navbar-text">
                     <a id="loginButton">
                         <span class="fa fa-sign-in-alt "></span> Login</a>
@@ -330,17 +334,15 @@
                     <div class="col-12 col-md-8 col-lg-8 text-center">
                         <!-- Preheading -->
                         <h3 class="text-xs text-light">
-                            <span class="text-light">Fpt</span> / University
+                            <h2 class="text-light">FPT University</h2> 
                         </h3>
                         <!-- Heading -->
                         <h4 class="display-1 text-light mb-4 title-heading">
                             <strong>Lost and Found</strong>
                         </h4>
                         <a class="btn btn-outline-light btn-lg m-2" href="#" role="button" rel="nofollow"
-                            target="_blank">Bạn mất
-                            đồ?</a>
-                        <a class="btn btn-outline-light btn-lg m-2" href="#" target="_blank" role="button">Bạn nhặt được
-                            đồ?</a>
+                            target="_blank">Bạn mất đồ?</a>
+                        <a class="btn btn-outline-light btn-lg m-2" href="#" target="_blank" role="button">Bạn nhặt được đồ?</a>
                     </div>
                 </div>
             </div>
@@ -349,26 +351,20 @@
 
     <section class="container my-5">
         <div class="row">
-            <div class="sw col search-bar">
-                <form class="">
-                    <input type="search" class="search" placeholder="Search...">
-                    <button class="go">
-                        <svg enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"
-                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path
-                                d="M497.913,497.913c-18.782,18.782-49.225,18.782-68.008,0l-84.862-84.863c-34.889,22.382-76.13,35.717-120.659,35.717  C100.469,448.767,0,348.312,0,224.383S100.469,0,224.384,0c123.931,0,224.384,100.452,224.384,224.383  c0,44.514-13.352,85.771-35.718,120.676l84.863,84.863C516.695,448.704,516.695,479.131,497.913,497.913z M224.384,64.109  c-88.511,0-160.274,71.747-160.274,160.273c0,88.526,71.764,160.274,160.274,160.274c88.525,0,160.273-71.748,160.273-160.274  C384.657,135.856,312.909,64.109,224.384,64.109z">
-                            </path>
-                        </svg>
-                    </button>
-
-                </form>
-            </div>
+          
+            <div class="col-12">
+                <div id="post-bar" class="post-bar">
+                    <h2> Create new post</h2>
+                    <a href="#" type="button" class="btn btn-light post-button btn-lg" data-toggle="modal" data-placement="left"
+                        title="Đăng bài" data-target="#myModal"><i class="fas fa-plus"></i></a>
+                </div>
+                <!-- <button type="button" class="btn btn-primary btn-block"><i class="fa-solid fa-plus"></i> New post</button> -->
+            </div>      
         </div>
         <div class="row mb-4">
             <div class="col-lg-8 mx-auto text-center">
                 <h2 class="fs-1">All Item here</h2>
-                <p class="mb-0">Phân loại tìm kiếm</p>
+                <p class="mb-2">Phân loại tìm kiếm</p>
             </div>
         </div>
 
@@ -428,10 +424,18 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
-                                    additional content.</p>
+                                    additional content. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
+                                    a excepturi laborum nesciunt quaerat illum esse consectetur eosRerum a excepturi
+                                    laborum nesciunt quaerat illum esse consectetur eosRerum a excepturi laborum
+                                    nesciunt quaerat illum esse consectetur eosRerum a excepturi laborum nesciunt
+                                    quaerat illum esse consectetur eosRerum a excepturi laborum nesciunt quaerat illum
+                                    esse consectetur eosRerum a excepturi laborum nesciunt quaerat illum esse
+                                    consectetur eos. Veniam fugiat esse earum repellat quas velit dolorum cumque magni?
+                                    Perspiciatis, sed?</p>
                             </div>
                             <!-- Card footer -->
                             <div class="card-footer pt-0 pb-3">
@@ -460,7 +464,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -491,7 +496,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -523,7 +529,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -554,7 +561,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -586,7 +594,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -617,7 +626,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Mất điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -649,7 +659,8 @@
                                 </div>
                                 <!-- Title -->
                                 <h5 class="card-title fw-normal"><a href="#">Tìm thấy điện thoại</a></h5>
-                                <p class="text-truncate-2 mb-2">This is a longer card with supporting text below as a
+                                <p class="text-truncate-2 mb-2 description">This is a longer card with supporting text
+                                    below as a
                                     natural
                                     lead-in to
                                     additional content.</p>
@@ -767,16 +778,16 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="../js/myApp.js"></script>
     <script>
         DecoupledEditor

@@ -49,10 +49,6 @@ h6 {
 
 /* fileName:  Style.css */
 
-.title-heading {
-    background: rgba(194, 185, 185, 0.3);
-}
-
 #nav_header {
     font-size: 18px;
 }
@@ -62,11 +58,11 @@ h6 {
 }
 
 .nav-header-bar li:hover {
-    color: yellow
+    color: orange;
 }
 
 #loginButton:hover {
-    color: yellow;
+    color: orange;
     cursor: pointer;
 }
 
@@ -235,6 +231,7 @@ h6 {
 
 .card-detail {
     cursor: pointer;
+
 }
 
 /* @media screen and (max-width: 768px) {
@@ -254,6 +251,7 @@ h6 {
 
 .card-body {
     height: 270px;
+
 }
 
 .status_object {
@@ -331,16 +329,11 @@ h6 {
 }
 
 #post-bar {
-    position: fixed;
-    padding: 15px 10px;
-    right: 10px;
-    bottom: 35%;
-    width: 73px;
-    height: 250px;
-    background-color: rgba(108, 117, 125, 0.4);
+    color: orange;
+    background-color: rgba(108, 117, 125, 0.2);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border-radius: 20px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .post-button {
@@ -348,7 +341,8 @@ h6 {
 }
 
 .display-1 {
-    font-size: 4rem;
+    font-size: 5.5rem;
+    font-weight: 400;
 }
 
 .sw {
@@ -472,3 +466,25 @@ h6 {
     font-weight: 500;
     font-size: 1.2rem
 }
+
+.description {
+    height: 140px;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
+input[type=text] {
+    /* display: inline; */
+    margin-right: 15px;
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 0px 10px 12px;
+    transition: width 0.4s ease-in-out;
+    float: right;
+  }
+  
+input[type=text]:focus {
+    width: 150%;
+  }
