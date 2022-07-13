@@ -472,8 +472,8 @@ h6 {
     overflow: clip;
     text-overflow: ellipsis;
 }
-input[type=text] {
-    /* display: inline; */
+
+#input_search {
     margin-right: 15px;
     width: 100px;
     box-sizing: border-box;
@@ -483,8 +483,8 @@ input[type=text] {
     padding: 10px 0px 10px 12px;
     transition: width 0.4s ease-in-out;
     float: right;
-  }
-  
-input[type=text]:focus {
+}
+
+#input_search:focus {
     width: 150%;
-  }
+}
