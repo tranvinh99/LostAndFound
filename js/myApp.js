@@ -72,3 +72,12 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// $('input_search').keyup(() => {
+// 	$('.card-list-item').removeClass('d-none');
+//     var filter = $(this).val();
+//     $('.card-detail')
+//     	.find(':not(:contains("' + filter + '"))')
+//     	.parent()
+//     	.addClass('d-none');
+// })
