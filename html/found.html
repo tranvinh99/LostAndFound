@@ -15,6 +15,7 @@
     <title>All found object</title>
     <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link href="../css/profile.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/decoupled-document/ckeditor.js"></script>
 </head>
 
 <body>
@@ -133,15 +134,15 @@
     </div>
 
     <div class="row">
-          
+
         <div class="col-12">
             <div id="post-bar" class="post-bar">
                 <h2> Create new post</h2>
-                <a href="#" type="button" class="btn btn-light post-button btn-lg" data-toggle="modal" data-placement="left"
-                    title="Đăng bài" data-target="#myModal"><i class="fas fa-plus"></i></a>
+                <a href="#" type="button" class="btn btn-light post-button btn-lg" data-toggle="modal"
+                    data-placement="left" title="Đăng bài" data-target="#myModal"><i class="fas fa-plus"></i></a>
             </div>
             <!-- <button type="button" class="btn btn-primary btn-block"><i class="fa-solid fa-plus"></i> New post</button> -->
-        </div>      
+        </div>
     </div>
     <!-- Post -->
     <div class="modal fade" id="myModal">
@@ -166,9 +167,11 @@
                             <div class="col-12 col-sm-2 mt-3">
                                 <p>Category:</p>
                             </div>
+
                             <div class="col-12 col-sm-4 mt-2">
                                 <select name="cars" class="custom-select mb-3">
-                                    <option value="Found" selected>Found</option>
+                                    <option selected>Type</option>
+                                    <option value="Found">Found</option>
                                     <option value="Lost">Lost</option>
                                 </select>
                             </div>
@@ -198,6 +201,21 @@
                             </div>
                             <div class="col-sm-4 mt-3">
                                 <input style="border: none; cursor: pointer" type="time" id="" name="">
+                            </div>
+                            <div class="col-12 col-sm-2 mt-3">
+                                <p>Loại vật phẩm:</p>
+                            </div>
+                            <div class="col-12 col-sm-4 mt-3">
+                                <select name="item_type" class="custom-select mb-3">
+                                    <option value="" selected>Bình nước</option>
+                                    <option value="">Thẻ</option>
+                                    <option value="">Cmnd</option>
+                                    <option value="">Chìa khóa</option>
+                                    <option value="">linh kiện điện tử</option>
+                                    <option value="">Ví/bóp</option>
+                                    <option value="">Điện thoại</option>
+                                    <option value="">Khác</option>
+                                </select>
                             </div>
                             <div class="col-12 mt-3">
                                 <div id="editor">
@@ -573,7 +591,22 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
     <script src="../js/jquery.js"></script>
+    <script>
+        DecoupledEditor
+            .create(document.querySelector('.document-editor__editable'), {
 
+            })
+            .then(editor => {
+                const toolbarContainer = document.querySelector('.document-editor__toolbar');
+
+                toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+
+                window.editor = editor;
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    </script>
 </body>
 
 </html>
